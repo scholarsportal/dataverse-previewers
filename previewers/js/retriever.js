@@ -129,7 +129,7 @@ function addStandardPreviewHeader(file, title, authors) {
 			.attr('src', queryParams.get("siteUrl") + '/logos/preview_logo.png')
 			.attr(
 					'onerror',
-					'this.onerror=null;this.src="/dataverse-previewers/previewers/images/logo_placeholder.png";');
+					'this.onerror=null;this.src="images/logo_placeholder.png";');
   }          
 
 
