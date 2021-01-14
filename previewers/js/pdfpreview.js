@@ -37,7 +37,7 @@ addStandardPreviewHeader(file, title, authors);
 var pdfjsLib = window['pdfjs-dist/build/pdf'];
 
 // The workerSrc property shall be specified.
-pdfjsLib.GlobalWorkerOptions.workerSrc = '/dataverse-previewers/previewers/js/pdf.worker.js';
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'js/pdf.worker.js';
 
 /**
  * Asynchronously downloads PDF.
