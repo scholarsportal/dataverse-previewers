@@ -22,6 +22,14 @@ function writeContentAndData(data, fileUrl, file, title, authors) {
     }).addTo(map);
 
     // add data to map and zoom to added features
-    var geoJson = L.geoJSON(geoJsonData).addTo(map);
+    var geoJson = L.geoJSON(geoJsonData, {
+        onEachFeature: function (feature, layer) {
+            var popupcontent = [];
+            for (var prop in feature.properties) {
+                popupcontent.push(prop + ": " + feature.properties[prop]);
+            }
+            layer.bindPopup(popupcontent.join("<br />"));
+        }
+      }).addTo(map);
     map.fitBounds(geoJson.getBounds());
 }
